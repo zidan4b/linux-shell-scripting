@@ -21,3 +21,5 @@ The script runs in a continuous while loop and uses a case statement to execute 
 ## Run
 chmod +x manage_users.sh
 ./manage_users.sh
+
+## Note: manage_users.sh requires sudo privileges for administrative tasks.
