@@ -1,4 +1,4 @@
-manage_users.sh
+## manage_users.sh
 
 ## Description
 - manage_users.sh is a Bash shell script that provides an interactive, menu-driven interface for Linux user administration. 
