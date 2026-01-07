@@ -18,6 +18,6 @@ The script runs in a continuous while loop and uses a case statement to execute 
 - Set account expiration dates
 - Requires sudo privileges for administrative actions
 
-**Run**
+## Run
 chmod +x manage_users.sh
 ./manage_users.sh
