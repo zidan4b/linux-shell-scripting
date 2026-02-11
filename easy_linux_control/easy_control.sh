@@ -56,7 +56,7 @@ do
         read word
         grep -n --color=auto "$word" "$file" || echo "No matches."
       else
-        echo "❌ File not found."
+        echo " File not found."
       fi
       ;;
 
@@ -68,9 +68,9 @@ do
         # Create timestamped backup name
         backup="$(basename "$target")_backup_$(date +%Y%m%d_%H%M%S).tar.gz"
         tar -czf "$backup" "$target"    # Compress into tar.gz
-        echo "✅ Backup created: $backup"
+        echo "Backup created: $backup"
       else
-        echo "❌ Not found."
+        echo "Not found."
       fi
       ;;
 
@@ -84,13 +84,13 @@ do
         # Validate permission format (3 digits 0-7)
         if [[ "$perm" =~ ^[0-7]{3}$ ]]; then
           chmod "$perm" "$item"
-          echo "✅ Permissions changed to $perm"
+          echo "Permissions changed to $perm"
           ls -l "$item"               
         else
-          echo "❌ Invalid permission. Use 3 digits like 755."
+          echo "Invalid permission. Use 3 digits like 755."
         fi
       else
-        echo "❌ Not found."
+        echo "Not found."
       fi
       ;;
 
@@ -115,15 +115,15 @@ do
           read confirm
           if [ "$confirm" = "yes" ]; then
             kill "$pid"
-            echo "✅ Killed PID $pid"
+            echo "Killed PID $pid"
           else
             echo "Cancelled."
           fi
         else
-          echo "❌ PID not found."
+          echo "PID not found."
         fi
       else
-        echo "❌ Invalid PID."
+        echo "Invalid PID."
       fi
       ;;
 
